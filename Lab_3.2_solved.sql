@@ -27,10 +27,16 @@ FROM sakila.film;
 
 
 -- 5 Counting records for database insights:
+
 -- 5.1 Determine the number of stores that the company has.
 SELECT SUM(store_id)
 FROM sakila.store
 WHERE store_id  IS NOT NULL;
+
+-- 5.2 Determine the number of employees that the company has.
+SELECT COUNT(staff_id) FROM sakila.staff;
+WHERE staff_id  IS NOT NULL;
+
 
 -- 5.3 Determine how many films are available for rent and how many have been rented.
 SELECT * from sakila.inventory
